@@ -12211,6 +12211,20 @@ $$= \frac{3 \times Runs}{Number\:of\:Outs}$$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Data">Data<a class="anchor-link" href="#Data">&#182;</a></h2><ul>
+<li>Play-by-play data directly from MLB Gameday<ul>
+<li>Regular season games from 2015-2017</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Batting-Tendencies">Batting Tendencies<a class="anchor-link" href="#Batting-Tendencies">&#182;</a></h2><ul>
 <li>Many idioms about how to pitch<ul>
 <li>"Hard stuff in, soft stuff away"</li>
@@ -12804,6 +12818,99 @@ Test statistic: -6.895932. P-value: 0.000000
 </li>
 </ul>
 </li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Machine-Learning">Machine Learning<a class="anchor-link" href="#Machine-Learning">&#182;</a></h2><ul>
+<li>Unsure if model would handle player ID numbers</li>
+<li>Uncertain if model would predict multi-label, multi-class reliably</li>
+<li>Created baseline models for comparison</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Machine-Learning-(cont.d)">Machine Learning (cont.d)<a class="anchor-link" href="#Machine-Learning-(cont.d)">&#182;</a></h2><ul>
+<li>Outs, no player IDs<ul>
+<li>loss = 0.3835, accuracy = 0.8264, AUC = 0.5188</li>
+</ul>
+</li>
+<li>Calls, no player IDs<ul>
+<li>loss = 0.3410, accuracy = 0.5105, AUC = 0.7880</li>
+</ul>
+</li>
+<li>Outs, player IDs<ul>
+<li>loss = 0.3881, accuracy = 0.8262, AUC = 0.5304</li>
+</ul>
+</li>
+<li>Calls, player IDs (*)<ul>
+<li>loss = 0.3443, accuracy = 0.5012, AUC = 0.7825</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="model_calls_id">model_calls_id<a class="anchor-link" href="#model_calls_id">&#182;</a></h2><ul>
+<li>25 more models were created for fine tuning<ul>
+<li>All performed similiarly</li>
+</ul>
+</li>
+<li>"Best" model<ul>
+<li>Validation loss = 0.3437</li>
+<li>AUC = 0.6876</li>
+<li>Hamming loss = 0.2229</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="model_calls_id-(cont.d)">model_calls_id (cont.d)<a class="anchor-link" href="#model_calls_id-(cont.d)">&#182;</a></h2><ul>
+<li>Per class metrics (F1 score)<ul>
+<li>Balls = 0.7532</li>
+<li>Calls strikes = 0.5408</li>
+<li>Fouls = 0.3971</li>
+<li>Hits = 0.2137</li>
+<li>Swinging strikes = 0.1781</li>
+<li>Outs = 0.5473</li>
+</ul>
+</li>
+<li>Trouble distinguishing hits and swinging strikes</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Future-work">Future work<a class="anchor-link" href="#Future-work">&#182;</a></h2><ul>
+<li>Better handling of player ID numbers</li>
+<li>Incorporate who umpires</li>
+<li>Upsample least common class and/or downsample most common class</li>
+<li>Turn into multi-class classification</li>
 </ul>
 
 </div>
