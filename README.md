@@ -1,5 +1,7 @@
 # Capstone_Project2
 
+## MLB Pitching
+
 This repository contains all files relevant to my second capstone project as part of Springboard's Data Science Career Track mentorship program.
 
 The goal of this project is to develop a model that could reliably predict the outcome of a pitch given factors about what the pitcher wants to throw. The hopes for this model is to utilized by pitchers and coaches/managers to take those factors to effectively predict the outcome of the pitch which  will hopefully lead to more effective pitching and lower pitch counts. If you'd like to find out more behind the motivation of this project, it could be found in the Capstone Project 2 Proposal document above.
